@@ -1,0 +1,17 @@
+.categories {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .categories button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .categories button:hover {
+    background-color: #e0e0e0;
+  }
+  

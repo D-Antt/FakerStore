@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .title {
+    color: #3A4895;
+    ;
+  }
+  
+  
+  /*.categories {
+    Styling for category links
+  }*/
+  
