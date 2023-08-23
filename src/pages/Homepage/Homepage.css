@@ -1,0 +1,9 @@
+.homepage {
+    display: flex;
+    flex-wrap: wrap; /* Allows the product cards to wrap to the next line */
+    justify-content: space-around; /* Spaces the product cards evenly */
+    padding: 20px; /* Adds some padding around the entire grid */
+  }
+  
+  /* You can add more specific styles or media queries if needed */
+  

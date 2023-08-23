@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Header from './components/Header/Header'; // Importing the Header component
-import Categories from './components/Categories/Categories'; // Importing the Categories component
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Categories from './components/Categories/Categories';
 import Homepage from './pages/Homepage/Homepage';
 import Footer from './components/Footer/Footer';
-import './App.css'
+import './App.css';
 
 function App() {
   const [categories, setCategories] = useState([]);
@@ -26,16 +27,19 @@ function App() {
         .then((json) => setProducts(json));
     }
   };
-  
 
   return (
-    <div className='app-container'>
-      <Header />
-      <Categories categories={categories} onSelectCategory={handleSelectCategory} />
-      {/* Render products based on the selected category */}
-      <Homepage />
-      <Footer />
-    </div>
+    <Router>
+      <div className='app-container'>
+        <Header />
+        <Categories categories={categories} onSelectCategory={handleSelectCategory} />
+        <Routes>
+          <Route path="/" element={<Homepage products={products} />} />
+          {/* Add other routes here if needed */}
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

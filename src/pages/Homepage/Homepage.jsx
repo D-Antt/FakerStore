@@ -1,10 +1,15 @@
-import React from 'react'
-import './Homepage.css'
+import React from 'react';
+import ProductCard from '../../components/ProductCard/ProductCard';
+import './Homepage.css'; // Importing the CSS file
 
-function Homepage() {
+function Homepage({ products }) {
   return (
-    <div>Homepage</div>
-  )
+    <div className="homepage">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
+    </div>
+  );
 }
 
-export default Homepage
+export default Homepage;
