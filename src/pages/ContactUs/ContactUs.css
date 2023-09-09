@@ -1,23 +1,43 @@
 /* Contact Us Page CSS */
+/* I had some obstacles figuring out how to make the placehoder font white.  This is what I found. */
+/* For WebKit browsers like Chrome and Safari */
+.contact-form input[type="text"]::placeholder,
+.contact-form textarea::placeholder {
+  color: white;
+  opacity: 1; /* Optional, to make it fully opaque */
+}
+
+/* For Firefox */
+.contact-form input[type="text"]::-moz-placeholder,
+.contact-form textarea::-moz-placeholder {
+  color: white;
+  opacity: 1;
+}
+
+/* For Internet Explorer */
+.contact-form input[type="text"]:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+  color: white;
+}
+
 
 .contact-page {
     background-color: #f5f5f5;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
     width: 100%;
   }
   
   .contact-form {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
     background-color: white;
-    padding: 20px;
+    padding: 40px 20px 100px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 60%;
+    height: 50vh;  /* Adjust the height here */
   }
   
   .contact-form h1 {
@@ -25,15 +45,14 @@
     color: black;
   }
   
-
   .contact-form input[type="text"],
 .contact-form textarea {
   display: block;
-  width: 100%;
+  width: 33%;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px auto;  /* Center the input fields */
   background-color: #B4B4B4;
-  color: white;  /* This should make the text white */
+  color: white;
   border: none;
   border-radius: 5px;
 }
@@ -46,5 +65,6 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 10px auto;  /* Center the button */
+    display: block;  /* Make it a block-level element */
   }
-  
