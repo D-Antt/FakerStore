@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 import "./Footer.css";
 
 function Footer() {
@@ -8,7 +9,7 @@ function Footer() {
         Made with ❤️ by mimo
       </div>
       <div className="right-side">
-        <a href="#contact-us" className="contact-link">Contact Us</a>
+        <Link to="/contactus" className="contact-link">Contact Us</Link>  {/* Use Link instead of a */}
       </div>
     </footer>
   );
