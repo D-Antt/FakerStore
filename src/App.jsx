@@ -25,8 +25,17 @@ function App() {
   }, []);
   
   const handleSelectCategory = (category) => {
-    // ... (your existing code for fetching products)
+    if (category === 'all') {
+      fetch('https://fakestoreapi.com/products')
+        .then((res) => res.json())
+        .then((json) => setProducts(json));
+    } else {
+      fetch(`https://fakestoreapi.com/products/category/${category}`)
+        .then((res) => res.json())
+        .then((json) => setProducts(json));
+    }
   };
+  
 
   return (
     <Router>
